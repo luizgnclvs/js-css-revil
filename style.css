@@ -1,4 +1,83 @@
-#id {
-    font-family: 'resident_evil_classic_fontRg';
+#title-card {
+    padding-top: 150px;
+    max-width: 1000px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tagline {
+    display: inline-block;
+    font-size: 14px;
+    color: #fe0000;
     text-transform: uppercase;
+    text-shadow: #000 1px 1px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.tagline::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #fe0000;
+    box-shadow: #000 0.75px 0.5px;
+    position: absolute;
+    top: 50%;
+    left: -55px;
+    transform: translateY(-50%);
+}
+
+.tagline::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #fe0000;
+    box-shadow: #000 0.75px 0.5px;
+    position: absolute;
+    top: 50%;
+    right: -55px;
+    transform: translateY(-50%);
+}
+
+.title {
+    font-family: 'residentEvilClassic';
+    text-transform: uppercase;
+    color: #fe0000;
+    text-shadow: #000 5px 5px;
+    font-size: 90px;
+    letter-spacing: 0.1vw;
+    white-space: nowrap;
+}
+
+.reveal-animation {
+    animation: revealText .5s forwards;
+}
+
+.animation-second {
+    animation-delay: .12s;
+}
+
+@font-face {
+    font-family: 'residentEvilClassic';
+    src: url('./assets/Resident\ Evil\ Classic\ Font\ Regular/resident_evil_classic_game_font_by_snakeyboy_ddxbd72-webfont.woff') format('woff'),
+         url('./assets/Resident\ Evil\ Classic\ Font\ Regular/resident_evil_classic_game_font_by_snakeyboy_ddxbd72-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes revealText {
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
 }
