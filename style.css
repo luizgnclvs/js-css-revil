@@ -1,5 +1,21 @@
-#title-card {
-    padding-top: 150px;
+@font-face {
+    font-family: 'residentEvilClassic';
+    src: url('./assets/fonts/RE-Classic/resident_evil_classic_game_font_by_snakeyboy_ddxbd72-webfont.woff') format('woff'),
+         url('./assets/fonts/RE-Classic/resident_evil_classic_game_font_by_snakeyboy_ddxbd72-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'typewriter';
+    src: url('./assets/fonts/Typewriter/fonts_by_alex_-_corehumanistsans-webfont.woff') format('woff'),
+         url('./assets/fonts/Typewriter/fonts_by_alex_-_corehumanistsans-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title-card {
+    padding-top: 30px;
     max-width: 1000px;
     z-index: 100;
     display: flex;
@@ -8,9 +24,20 @@
     align-items: center;
 }
 
+.title {
+    font-family: 'residentEvilClassic';
+    text-transform: uppercase;
+    color: #fe0000;
+    text-shadow: #000 5px 5px;
+    font-size: 90px;
+    letter-spacing: 0.1vw;
+    white-space: nowrap;
+}
+
 .tagline {
+    font-family: 'Courier New', Courier, monospace;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     color: #fe0000;
     text-transform: uppercase;
     text-shadow: #000 1px 1px;
@@ -26,6 +53,8 @@
     content: "";
     width: 40px;
     height: 2px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
     background-color: #fe0000;
     box-shadow: #000 0.75px 0.5px;
     position: absolute;
@@ -38,22 +67,14 @@
     content: "";
     width: 40px;
     height: 2px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
     background-color: #fe0000;
     box-shadow: #000 0.75px 0.5px;
     position: absolute;
     top: 50%;
     right: -55px;
     transform: translateY(-50%);
-}
-
-.title {
-    font-family: 'residentEvilClassic';
-    text-transform: uppercase;
-    color: #fe0000;
-    text-shadow: #000 5px 5px;
-    font-size: 90px;
-    letter-spacing: 0.1vw;
-    white-space: nowrap;
 }
 
 .reveal-animation {
@@ -64,12 +85,122 @@
     animation-delay: .12s;
 }
 
-@font-face {
-    font-family: 'residentEvilClassic';
-    src: url('./assets/Resident\ Evil\ Classic\ Font\ Regular/resident_evil_classic_game_font_by_snakeyboy_ddxbd72-webfont.woff') format('woff'),
-         url('./assets/Resident\ Evil\ Classic\ Font\ Regular/resident_evil_classic_game_font_by_snakeyboy_ddxbd72-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+
+
+
+
+
+.keyboard-container {
+    font-family: "typewriter";
+    text-align: center;
+    color: #222838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #abf2a4;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 50px;
+    width: 1050px;
+    border: 1px solid black;
+    border-radius: 60px 60px 150px 150px;
+    background-image: url('https://us.123rf.com/450wm/nazarnj/nazarnj1603/nazarnj160300045/54336108-dark-cherry-wood-texture.jpg?ver=6');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    box-shadow: 3px 37px 62px 22px rgba(0,0,0,0.68), inset 0px -13px 20px -10px rgba(95,34,41,1), inset -15px 1px 20px -10px rgba(95,34,41,1), 0px 11px 26px 8px rgba(0,0,0,1), inset 10px 10px 26px -3px rgba(0,0,0,0.87);
+}
+
+.keyboard {
+    padding: 50px 20px;
+    background-color: #1A1F33;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    border: 3px solid black;
+    border-radius: 120px 120px 150px 150px;
+    box-shadow: inset -1px -5px 66px 44px rgba(0,0,0,1),  -10px -10px 14px -4px rgba(100,39,46,1);
+    justify-content: center;
+}
+
+.row1, .row2, .row3, .row4, .space {
+    display: flex;
+    /*   width: 900px; */
+    height: 80px;
+    justify-content: space-around;
+}
+
+.row2 {
+    margin-left: 45px;
+}
+
+.row3 {
+    margin-left: 110px;
+}
+
+.key {
+    box-sizing: border-box;
+    border: 5px solid #FAFDFE;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-top: 0.5em;
+    font-size: 1.5em;
+    background-color: #DFD2AF;
+    box-shadow: inset -10px -10px 10px -10px rgba(0,0,0,0.58), inset 20px 20px 20px -20px rgba(255,255,255,1), 0px 0px 18px 12px rgba(0,0,0,1);
+    margin: 10px;
+}
+
+.row1 .top-letter {
+    font-size: 0.7em;
+}
+
+.row1 .bottom-letter {
+    font-size: 1em;
+}
+
+.double {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8em;
+    padding-top: 0.3em;
+}
+
+.double-small, .shift {
+    display: flex;
+    line-height: 1.3em;
+    flex-direction: column;
+}
+
+.back {
+    font-size: 0.7em;
+    padding-top: 10px;
+}
+
+.shift {
+    font-size: 0.8em;
+    padding-top: 1.5em;
+    height: 75px;
+    width: 75px;
+}
+
+.double-small {
+    font-size: 0.9em;
+}
+
+.space {
+    border: 3px solid black;
+    background-color: #1A1F33;
+    border-radius: 20px;
+    width: 60%;
+    height: 60px;
+    margin-top: 20px;
+    box-shadow: -1px -10px 12px -4px rgba(0,0,0,0.5), -19px -5px 12px -4px rgba(0,0,0,1), inset -5px -5px 6px 1px rgba(255,255,255,0.3), 10px 10px 26px -3px rgba(0,0,0,0.87);
 }
 
 @keyframes revealText {
