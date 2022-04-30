@@ -24,18 +24,16 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 3vh;
-    max-width: 1000px;
-    z-index: 100;
 }
 
 .title {
     font-family: 'residentEvilClassic';
     font-size: 18vw;
     text-transform: uppercase;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.5vw;
     white-space: nowrap;
     color: #fe0000;
-    text-shadow: #000 5px 5px;
+    text-shadow: #000 1vw 1vw;
 }
 
 .tagline {
@@ -43,14 +41,14 @@ body {
     position: relative;
     margin-left: 8vw;
     margin-right: 8vw;
-    margin-bottom: 16px;
+    margin-bottom: 2vh;
     font-family: 'typewriter';
     font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: #000 1.5px 1.5px;
-    letter-spacing: 4px;
+    text-shadow: #000 0.25vw 0.25vw;
+    letter-spacing: 0.5vw;
     color: #fe0000;
 }
 
@@ -58,28 +56,28 @@ body {
     content: "";
     position: absolute;
     width: 8vw;
-    height: 2px;
+    height: 0.75vh;
     top: 50%;
     left: -9vw;
     transform: translateY(-50%);
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+    border-bottom-left-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
     background-color: #fe0000;
-    box-shadow: #000 1.5px 1.5px;
+    box-shadow: #000 0.25vw 0.25vw;
 }
 
 .tagline::after {
     content: "";
     position: absolute;
     width: 8vw;
-    height: 2px;
+    height: 0.75vh;
     top: 50%;
-    right: -8.2vw;
+    right: -9vw;
     transform: translateY(-50%);
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
     background-color: #fe0000;
-    box-shadow: #000 1.5px 1.5px;
+    box-shadow: #000 0.25vw 0.25vw;
 }
 
 .reveal-animation {
@@ -90,7 +88,7 @@ body {
     animation-delay: .12s;
 }
 
-.background {
+.keyboard-background {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -103,63 +101,76 @@ body {
     flex-wrap: wrap;
     position: fixed;
     justify-content: center;
+    z-index: 100;
     bottom: 1.5vh;
     margin-left: 0.5%;
     margin-right: 0.5%;
     width: 97vw;
     height: 40vh;
-    border-radius: 10px;
-    background-color: #1A1F33;
+    border-radius: 1vh;
+    background-color: #1a1f33;
+    /* border: 3px solid black;
+    box-shadow: inset -1px -5px 66px 44px rgba(0,0,0,1),  -10px -10px 14px -4px rgba(100,39,46,1); */
+}
+
+.row1, .row2, .row3, .row4, .space {
+    display: flex;
+    width: 97vw;
+    margin-top: 1vh;
+    justify-content: space-around;
+}
+
+button {
+    padding: 0 0 0 0;
+}
+
+.key {
+    box-sizing: border-box;
+    margin: 1vw;
+    width: 6vh;
+    height: 6vh;
+    border: double 0.75vh transparent;
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: radial-gradient(#23293f, #3e4254),
+                      linear-gradient(
+                                    -72deg,
+                                    #dedeff,
+                                    #ffffff 16%,
+                                    #dedeff 21%,
+                                    #ffffff 24%,
+                                    #9999a8 27%,
+                                    #dedeff 36%,
+                                    #ffffff 45%,
+                                    #ffffff 60%,
+                                    #dedeff 72%,
+                                    #ffffff 80%,
+                                    #dedeff 84%,
+                                    #555564
+    );
+    box-shadow: inset -10px -10px 10px -10px rgba(0, 0, 0, 0.586), inset 10px 10px 10px -10px rgb(255, 255, 255, 1), 0px 0px 18px 12px rgba(0,0,0,1);
+    /* box-shadow: inset -10px -10px 10px -10px rgba(0,0,0,0.58), inset 20px 20px 20px -20px rgba(255,255,255,1), 0px 0px 18px 12px rgba(0,0,0,1); */
 }
 
 
 
 
 /* .background {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    margin-top: 50px;
-    width: 1050px;
-    border: 1px solid black;
-    border-radius: 20px 20px 20px 20px;
     background-image: url('https://us.123rf.com/450wm/nazarnj/nazarnj1603/nazarnj160300045/54336108-dark-cherry-wood-texture.jpg?ver=6');
     background-repeat: no-repeat;
     background-size: cover; 
     box-shadow: 3px 37px 62px 22px rgba(0,0,0,0.68), inset 0px -13px 20px -10px rgba(95,34,41,1), inset -15px 1px 20px -10px rgba(95,34,41,1), 0px 11px 26px 8px rgba(0,0,0,1), inset 10px 10px 26px -3px rgba(0,0,0,0.87);
 } */
 
-/* .keyboard {
-    position: fixed;
-    bottom: 2vh;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    max-width: 96vw;
-    max-height: 45vh;
-    background-color: #1A1F33;
-    display: flex;
-    flex-wrap: wrap;
-    border: 3px solid black;
-    border-radius: 20px 20px;
-    box-shadow: inset -1px -5px 66px 44px rgba(0,0,0,1),  -10px -10px 14px -4px rgba(100,39,46,1);
-    justify-content: center;
-}
 
+/*
 .row1, .row2, .row3, .row4, .space {
     display: flex;
     max-width: 96vw;
     height: 80px;
     justify-content: space-around;
 }
-
-.row2 {
-    margin-left: 45px;
-}
-
-.row3 {
-    margin-left: 110px;
-}
-
 .key {
     box-sizing: border-box;
     border: 5px solid #FAFDFE;
@@ -172,6 +183,14 @@ body {
     box-shadow: inset -10px -10px 10px -10px rgba(0,0,0,0.58), inset 20px 20px 20px -20px rgba(255,255,255,1), 0px 0px 18px 12px rgba(0,0,0,1);
     margin: 10px;
 }
+.row2 {
+    margin-left: 45px;
+}
+
+.row3 {
+    margin-left: 110px;
+}
+
 
 .row1 .top-letter {
     font-size: 0.7em;
